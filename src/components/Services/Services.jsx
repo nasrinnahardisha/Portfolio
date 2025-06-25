@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Services.css";
 
 const Services = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Navbar></Navbar>

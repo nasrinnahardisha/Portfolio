@@ -4,6 +4,7 @@ import portImg2 from "../../assets/project-2.jpg";
 import portImg3 from "../../assets/project-3.jpg";
 import portImg4 from "../../assets/project-4.jpg";
 import portImg5 from "../../assets/project-5.jpg";
+import { useEffect } from "react";
 
 const projects = [
   {
@@ -44,6 +45,15 @@ const projects = [
 ];
 
 const Portfolio = () => {
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+
+
   return (
     <div>
       <Navbar></Navbar>

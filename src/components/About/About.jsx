@@ -8,6 +8,10 @@ import { useEffect } from "react";
 
 const About = () => {
 useEffect(() => {
+
+  window.scrollTo(0, 0);
+
+
     const sr = ScrollReveal({
       reset: false,
       distance: '50px',

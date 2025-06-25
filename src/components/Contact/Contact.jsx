@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Contact.css";
 
@@ -6,6 +7,10 @@ const Contact = () => {
     e.preventDefault();
     console.log("Form submitted");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -74,7 +79,7 @@ const Contact = () => {
                           nasrinnahardisha@gmail.com
                         </a>
                       </p>
-                      <p>
+                      {/* <p>
                         <svg
                           class="mr-2 inline align-middle fill-current text-omega-500"
                           xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +118,7 @@ const Contact = () => {
                         >
                           @NasrinNahar
                         </a>
-                      </p>
+                      </p> */}
                     </small>
                   </div>
 
