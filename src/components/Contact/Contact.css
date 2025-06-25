@@ -1,0 +1,13 @@
+.border-omega-700 {
+    --tw-border-opacity: 1;
+    border-color: rgb(63 63 70/var(--tw-border-opacity));
+}
+
+.bg-omega-700\/20 {
+    background-color: rgb(63 63 70/.2);
+}
+
+.border-accent {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246/var(--tw-border-opacity));
+}

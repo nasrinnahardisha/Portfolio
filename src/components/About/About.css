@@ -1,0 +1,89 @@
+.my-image{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    color: transparent;
+}
+
+.border-alpha {
+    --tw-border-opacity: 1;
+    border-color: rgb(245 158 11/var(--tw-border-opacity));
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.text-gradient-500 {
+  background: linear-gradient(#F47A2A, #F5524E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.to-accent {
+    --tw-gradient-to: rgb(59 130 246/1)
+}
+
+.from-accent-700 {
+    --tw-gradient-from: rgb(29 78 216/1);
+    --tw-gradient-to: rgb(29 78 216/0);
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to)
+}
+
+
+.bg-gradient-to-tr {
+    background-image: linear-gradient(to top right,var(--tw-gradient-stops))
+}
+.bg-omega-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(63 63 70/var(--tw-bg-opacity))
+}
+
+
+.bg-gradient-omega-900 {
+    background-image: linear-gradient(to right,var(--tw-gradient-stops));
+    --tw-gradient-from: rgb(24 24 27/1);
+    --tw-gradient-to: rgb(24 24 27/0);
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+    --tw-gradient-to: rgb(39 39 42/1)
+}
+
+
+@media (min-width: 575px) {
+.animate-typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid currentColor;
+  animation: typewriter 4s steps(30, end) infinite;
+}
+
+.animate-blink {
+  animation: blink 0.7s steps(1) infinite;
+}
+}
+@media (max-width: 574px) {
+  .animate-typewriter,
+  .animate-blink {
+    animation: none;
+    border-right: none;
+  }
+}
+
