@@ -1,5 +1,3 @@
-
-
 import { useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
 import dishaImg from "../../assets/nasrin.jpg";
@@ -33,7 +31,7 @@ const Home = () => {
         <div className="relative w-full max-w-screen-xl  pb-4">
           <div className="relative h-full">
             <div className="flex h-full w-full flex-col content-center items-center lg:py-4">
-              <div className="mx-auto my-auto p-4 md:p-10 lg:p-20 md:bg-[#262626]">
+              <div className="mx-auto my-auto p-6 md:p-10 lg:p-20 md:bg-[#262626]">
                 <div className=" text-center md:flex md:text-left">
                   <div className="left-reveal relative inline-block shrink-0 md:order-2 md:-ml-40  overflow-hidden">
                     <div className="overflow-hidden">
@@ -52,7 +50,7 @@ const Home = () => {
                       />
                     </div>
                   </div>
-            
+
                   <div className="z-20 right-reveal mt-6 w-full md:m-0">
                     <div className="max-w-full md:max-w-[490px] md:transition-all md:duration-1000 lg:px-0">
                       <h1 className="text-4xl sm:text-5xl md:text-6xl">
@@ -79,12 +77,12 @@ const Home = () => {
                       <div className="my-6 md:my-12 "></div>
                       <div className="px-3 md:px-0 pb-3 md:pb-0">
                         <p className="text-base lg:text-lg">
-                          Hi,I am Nasrin Nahar.I am studying BSC Honours &
-                          freelancing.I am married.My husband is doing bussiness
-                          and his name is Ashik.I have a son and his name is
-                          Abrar Ehan. Lorem ipsum dolor sit amet consectetur
-                          adipisicing elit. Sit praesentium iure neque dolorem
-                          cum similique inventore id illum quos eaque.
+                          I’m Nasrin Nahar — a frontend web developer skilled in
+                          React.js and Tailwind CSS. I build clean, responsive,
+                          and accessible user interfaces that offer seamless
+                          user experiences. I’m passionate about creating
+                          impactful digital solutions and always eager to learn
+                          new things and take on exciting challenges.
                         </p>
                       </div>
                     </div>
@@ -120,7 +118,10 @@ const Home = () => {
                     <div className="mt-6 md:mt-12 mb-6 px-4  md:px-0">
                       <a
                         className="relative inline-flex items-center justify-center leading-normal no-underline group cursor-pointer select-none focus:outline-none peer md:peer-even:ml-6"
-                        href="/contact"
+                        href="/nasrin-nahar-cv.pdf"
+                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <div className="z-10 h-full w-full border-4 border-transparent group-active:border-alpha flex transform-gpu transition-transform not-prose font-mono py-4 px-8 sm:py-5 sm:px-10 text-base sm:text-lg hover:translate-x-2 hover:translate-y-2 bg-white text-black">
                           <span className="mx-auto">

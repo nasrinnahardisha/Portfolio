@@ -15,7 +15,7 @@ const Services = () => {
         <div className="relative w-full max-w-screen-xl lg:py-4">
           <main className="relative h-full bg-gradient-to-tr from-omega-900 via-omega-900 to-omega-800">
             <div className="flex h-full w-full flex-col content-center items-center pb-20 lg:py-4 xl:py-8">
-              <div className="mx-auto my-auto p-4 md:p-6 lg:p-12">
+              <div className="mx-auto my-auto p-6 lg:p-12">
                 <div className="flex flex-col items-center">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     <div className="col-span-full lg:col-span-1 row-span-2">

@@ -19,7 +19,7 @@ const Contact = () => {
         <div className="relative w-full max-w-screen-xl lg:py-4">
           <main className="relative h-full bg-gradient-to-tr from-omega-900 via-omega-900 to-omega-800">
             <div className="flex h-full w-full flex-col content-center items-center pb-20 lg:py-4 xl:py-8">
-              <div className="my-auto p-3 md:p-6 lg:p-12">
+              <div className="my-auto p-6 lg:p-12">
                 <div className="prose prose-invert items-start lg:flex">
                   <div className="md:transition-all md:duration-1000 prose prose-invert basis-1/3 lg:mr-14">
                     <div className="-mx-3 -mt-3 md:m-0">
