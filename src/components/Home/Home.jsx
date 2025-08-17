@@ -38,7 +38,7 @@ const Home = () => {
                       <img
                         src={dishaImg}
                         alt="Disha"
-                        className="w-full h-[300px]  md:w-[430px] lg:[500px] md:h-[718px] object-cover rounded-[10px]"
+                        className="w-[325px] h-[325px]  md:w-[430px] lg:[500px] md:h-[718px] object-cover rounded-[10px]"
                       />
                       <div
                         ref={overlayRef}
