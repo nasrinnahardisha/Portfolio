@@ -30,7 +30,7 @@ const Home = () => {
       <div className="container">
         <div className="relative w-full max-w-screen-xl  pb-4">
           <div className="relative h-full">
-            <div className="flex h-full w-full flex-col content-center items-center lg:py-4">
+            <div className="flex h-full w-full flex-col content-center items-center md:py-4">
               <div className="mx-auto my-auto p-6 md:p-10 lg:p-20 md:bg-[#262626]">
                 <div className=" text-center md:flex md:text-left">
                   <div className="left-reveal relative inline-block shrink-0 md:order-2 md:-ml-40  overflow-hidden">
@@ -38,7 +38,7 @@ const Home = () => {
                       <img
                         src={dishaImg}
                         alt="Disha"
-                        className="w-[300px] h-[300px]  md:w-[430px] lg:[500px] md:h-[718px] object-cover rounded-[10px]"
+                        className="w-full h-[300px]  md:w-[430px] lg:[500px] md:h-[718px] object-cover rounded-[10px]"
                       />
                       <div
                         ref={overlayRef}

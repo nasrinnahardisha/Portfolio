@@ -12,7 +12,7 @@ const Services = () => {
     <div>
       <Navbar></Navbar>
       <div className="container">
-        <div className="relative w-full max-w-screen-xl lg:py-4">
+        <div className="relative w-full max-w-screen-xl md:py-4">
           <main className="relative h-full bg-gradient-to-tr from-omega-900 via-omega-900 to-omega-800">
             <div className="flex h-full w-full flex-col content-center items-center pb-20 lg:py-4 xl:py-8">
               <div className="mx-auto my-auto p-6 lg:p-12">

@@ -4,6 +4,8 @@ import portImg2 from "../../assets/project-2.jpg";
 import portImg3 from "../../assets/project-3.jpg";
 import portImg4 from "../../assets/project-4.jpg";
 import portImg5 from "../../assets/project-5.jpg";
+import portImg6 from "../../assets/project-6.jpg";
+import portImg7 from "../../assets/project-7.jpg";
 import { useEffect } from "react";
 
 const projects = [
@@ -42,6 +44,20 @@ const projects = [
     description:
         "Designed with HTML & CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
   },
+  {
+    img: portImg6,
+    link: "https://nasrinnahardisha.github.io/techure/src/",
+    title: "Techure",
+    description:
+        "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
+  },
+  {
+    img: portImg7,
+    link: "https://nasrinnahardisha.github.io/techure__2/src/",
+    title: "Techure_2",
+    description:
+        "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
+  },
 ];
 
 const Portfolio = () => {
@@ -58,7 +74,7 @@ const Portfolio = () => {
     <div>
       <Navbar></Navbar>
       <div className="container">
-        <div className="relative w-full max-w-screen-xl lg:py-4">
+        <div className="relative w-full max-w-screen-xl md:py-4">
           <main className="relative h-full bg-gradient-to-tr from-omega-900 via-omega-900 to-omega-800">
             <div className="flex h-full w-full flex-col content-center items-center pb-20 lg:py-4 xl:py-8">
               <div className="mx-auto p-6 md:p-6 lg:p-12">
