@@ -31,9 +31,9 @@ const Home = () => {
         <div className="relative w-full max-w-screen-xl  pb-4">
           <div className="relative h-full">
             <div className="flex h-full w-full flex-col content-center items-center md:py-4">
-              <div className="mx-auto my-auto p-6 md:p-10 lg:p-20 md:bg-[#262626]">
+              <div className="mx-auto my-auto p-6 md:p-10 lg:p-12 md:bg-[#262626]">
                 <div className=" text-center md:flex md:text-left">
-                  <div className="left-reveal relative inline-block shrink-0 md:order-2 md:-ml-40  overflow-hidden">
+                  <div className="left-reveal relative inline-block shrink-0 md:order-2  overflow-hidden">
                     <div className="overflow-hidden">
                       <img
                         src={dishaImg}
@@ -78,7 +78,7 @@ const Home = () => {
                       <div className="px-3 md:px-0 pb-3 md:pb-0">
                         <p className="text-base lg:text-lg">
                           I’m Nasrin Nahar — a frontend web developer skilled in
-                          React.js and Tailwind CSS. I build clean, responsive,
+                          React.js, wordpress theme development and Tailwind CSS. I build clean, responsive,
                           and accessible user interfaces that offer seamless
                           user experiences. I’m passionate about creating
                           impactful digital solutions and always eager to learn

@@ -6,6 +6,8 @@ import portImg4 from "../../assets/project-4.jpg";
 import portImg5 from "../../assets/project-5.jpg";
 import portImg6 from "../../assets/project-6.jpg";
 import portImg7 from "../../assets/project-7.jpg";
+import portImg8 from "../../assets/project-7.jpg";
+import portImg9 from "../../assets/project-9.jpg";
 import { useEffect } from "react";
 
 const projects = [
@@ -57,6 +59,20 @@ const projects = [
     title: "Techure_2",
     description:
         "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
+  },
+  {
+    img: portImg8,
+    link: "https://techure2.free.nf/",
+    title: "Techure_2",
+    description:
+        "Custom WordPress theme developed with Tailwind CSS, fully responsive and optimized for all screen sizes.",
+  },
+  {
+    img: portImg9,
+    link: "https://dev-smoke-n-wings-dev.pantheonsite.io/",
+    title: "Smoke-N-Wings",
+    description:
+        "Custom WordPress theme developed with Tailwind CSS, fully responsive and optimized for all screen sizes.",
   },
 ];
 

@@ -53,8 +53,8 @@ useEffect(() => {
             <div className="flex h-full w-full flex-col content-center items-center md:my-4">
               <div className="mx-auto p-6 md:p-10 lg:p-20">
                 <div className="md:flex prose prose-invert">
-                  <div className=" relative flex h-screen basis-1/3 flex-col justify-between pb-24 md:h-auto md:items-center md:py-12">
-                    <div className=" absolute top-0 left-0 h-full w-full bg-omega-900 grayscale">
+                  <div className="relative flex h-screen basis-1/3 flex-col justify-between pb-24 md:h-auto md:items-center md:py-12">
+                    <div className="absolute top-0 left-0 h-full w-full bg-omega-900 grayscale">
                       <div className="relative w-full  h-full overflow-hidden">
                         <div className="absolute left-0 top-0 z-10 hidden h-full w-[120%] bg-omega-900 origin-bottom skew-x-6 transform-gpu transition-transform duration-700"></div>
 
