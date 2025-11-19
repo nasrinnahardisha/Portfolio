@@ -8,13 +8,14 @@ import portImg6 from "../../assets/project-6.jpg";
 import portImg7 from "../../assets/project-7.jpg";
 import portImg8 from "../../assets/project-7.jpg";
 import portImg9 from "../../assets/project-9.jpg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const projects = [
   {
     img: portImg1,
     link: "https://nasrinnahardisha.github.io/rrf-template-11/?fbclid=IwY2xjawKr5BlleHRuA2FlbQIxMABicmlkETFIMkZuSTJQOGZlcnQ2TkdCAR59-z7wcM_2iQHr3Cyip-2lWhdQmd_uCBXSdzcUQ72qOthuj4wf6YCUPO3w7w_aem_uzZ_nTmuEIMpvTRDSPdybA",
     title: "Lesson",
+    category: "HTML",
     description:
       "Designed with HTML & CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
   },
@@ -22,6 +23,7 @@ const projects = [
     img: portImg2,
     link: "https://nasrinnahardisha.github.io/portfolio-Website-7/#",
     title: "Portfolio",
+    category: "HTML",
     description:
       "Designed with HTML & CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
   },
@@ -29,6 +31,7 @@ const projects = [
     img: portImg3,
     link: "https://nasrinnahardisha.github.io/rrf-template-1/src/index.html?fbclid=IwY2xjawK7tVBleHRuA2FlbQIxMABicmlkETEwN1dIUnk1Z0hVaVpReEpnAR6hRbf9l7p3PZXcp9D_ixEA40dDadyIgQQpn3GVyOL04HSs_SooMQvS7LV55w_aem_vGV_HyaAOeh4ZLdAEe4Hog",
     title: "My_Tutor",
+    category: "Tailwind CSS",
     description:
       "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
   },
@@ -36,6 +39,7 @@ const projects = [
     img: portImg4,
     link: "https://nasrinnahardisha.github.io/rrf-exam-1/src/",
     title: "Portfolio",
+    category: "Tailwind CSS",
     description:
       "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
   },
@@ -43,48 +47,56 @@ const projects = [
     img: portImg5,
     link: "https://nasrinnahardisha.github.io/Landing_Page/",
     title: "landing Page",
+    category: "HTML",
     description:
-        "Designed with HTML & CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
+      "Designed with HTML & CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
   },
   {
     img: portImg6,
     link: "https://nasrinnahardisha.github.io/techure/src/",
     title: "Techure",
+    category: "Tailwind CSS",
     description:
-        "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
+      "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
   },
   {
     img: portImg7,
     link: "https://nasrinnahardisha.github.io/techure__2/src/",
     title: "Techure_2",
+    category: "Tailwind CSS",
     description:
-        "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
+      "Designed with Tailwind CSS. Built fully responsive and pixel-perfect layout for all screen sizes.",
   },
   {
     img: portImg8,
     link: "https://techure2.free.nf/",
     title: "Techure_2",
+    category: "WordPress",
     description:
-        "Custom WordPress theme developed with Tailwind CSS, fully responsive and optimized for all screen sizes.",
+      "Custom WordPress theme developed with Tailwind CSS, fully responsive and optimized for all screen sizes.",
   },
   {
     img: portImg9,
     link: "https://dev-smoke-n-wings-dev.pantheonsite.io/",
     title: "Smoke-N-Wings",
+    category: "WordPress",
     description:
-        "Custom WordPress theme developed with Tailwind CSS, fully responsive and optimized for all screen sizes.",
+      "Custom WordPress theme developed with Tailwind CSS, fully responsive and optimized for all screen sizes.",
   },
 ];
 
 const Portfolio = () => {
-
+  const [activeTab, setActiveTab] = useState("All");
+  const tabs = ["All", "HTML", "Tailwind CSS", "WordPress", "React"];
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-
-
+  const filteredProjects =
+    activeTab === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeTab);
 
   return (
     <div>
@@ -94,7 +106,7 @@ const Portfolio = () => {
           <main className="relative h-full bg-gradient-to-tr from-omega-900 via-omega-900 to-omega-800">
             <div className="flex h-full w-full flex-col content-center items-center pb-20 lg:py-4 xl:py-8">
               <div className="mx-auto p-6 md:p-6 lg:p-12">
-                <div className="prose prose-headings:mb-4 dark:prose-invert">
+                <div className="prose prose-headings:mb-4 dark:prose-invert text-center">
                   <div className="-mx-3 -mt-3 md:m-0">
                     <div className="bg-gradient-to-b from-omega-800 to-omega-800 px-3 pt-3 pb-0 md:bg-none md:mb-[.6rem] mb-0 md:p-0">
                       <h3>My Open-Source Projects</h3>
@@ -104,8 +116,28 @@ const Portfolio = () => {
                   <p>
                     Discover my most popular open-source projects on Github.
                   </p>
-                  <div className="mt-4 grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:mt-12 gap-4">
-                    {projects.map((project, i) => (
+
+                  {/* ⭐ Tabs Section */}
+                  <div className="flex gap-4 mt-8 flex-wrap justify-center">
+                    {tabs.map((tab) => (
+                      <button
+                        key={tab}
+                        onClick={() => setActiveTab(tab)}
+                        className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-300 
+                      ${
+                        activeTab === tab
+                          ? "bg-gradient-to-tr from-beta to-alpha text-black"
+                          : "bg-omega-800 text-white hover:bg-omega-700"
+                      }
+                    `}
+                      >
+                        {tab}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="mt-4 min-h-[400px] grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:mt-12 gap-4">
+                    
+                    {filteredProjects.map((project, i) => (
                       <a
                         href={project.link}
                         target="_blank"
@@ -131,7 +163,15 @@ const Portfolio = () => {
                         </div>
                       </a>
                     ))}
-                  </div>
+               
+
+                  {/* ⭐ No Project Found */}
+                  {filteredProjects.length === 0 && (
+                    <p className="text-center text-white mt-6">
+                      No projects available in this category.
+                    </p>
+                  )}
+                     </div>
                 </div>
               </div>
             </div>
@@ -143,3 +183,162 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+// import Navbar from "../Navbar/Navbar";
+// import portImg1 from "../../assets/project-1.jpg";
+// import portImg2 from "../../assets/project-2.jpg";
+// import portImg3 from "../../assets/project-3.jpg";
+// import portImg4 from "../../assets/project-4.jpg";
+// // import portImg5 from "../../assets/project-5.jpg";
+// import portImg6 from "../../assets/project-6.jpg";
+// // import portImg7 from "../../assets/project-7.jpg";
+// import portImg8 from "../../assets/project-7.jpg";
+// import portImg9 from "../../assets/project-9.jpg";
+// import {useState, useEffect } from "react";
+
+// const projects = [
+//   {
+//     img: portImg1,
+//     link: "...",
+//     title: "Lesson",
+//     description: "Designed with HTML & CSS.",
+//     category: "HTML"
+//   },
+//   {
+//     img: portImg3,
+//     link: "...",
+//     title: "My_Tutor",
+//     description: "Designed with Tailwind CSS.",
+//     category: "Tailwind"
+//   },
+//   {
+//     img: portImg8,
+//     link: "...",
+//     title: "Techure_2",
+//     description: "Custom WordPress theme",
+//     category: "WordPress"
+//   },
+//   {
+//     img: portImg9,
+//     link: "...",
+//     title: "Smoke-N-Wings",
+//     description: "Custom WordPress theme",
+//     category: "WordPress"
+//   },
+//   {
+//     img: portImg6,
+//     link: "...",
+//     title: "Techure",
+//     description: "Tailwind CSS project",
+//     category: "Tailwind"
+//   },
+//   {
+//     img: portImg4,
+//     link: "...",
+//     title: "Portfolio",
+//     description: "Tailwind CSS project",
+//     category: "Tailwind"
+//   },
+//   {
+//     img: portImg2,
+//     link: "...",
+//     title: "Portfolio",
+//     description: "HTML CSS project",
+//     category: "HTML"
+//   },
+// ];
+
+// const Portfolio = () => {
+//   const [activeTab, setActiveTab] = useState("All");
+
+//   const tabs = ["All", "Tailwind", "WordPress", "React", "HTML"];
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, []);
+
+//   // Filter Projects
+//   const filteredProjects =
+//     activeTab === "All"
+//       ? projects
+//       : projects.filter((p) => p.category === activeTab);
+
+//   return (
+//     <div>
+//       <Navbar />
+
+//       <div className="container">
+//         <div className="relative w-full max-w-screen-xl md:py-4">
+//           <main className="relative h-full bg-gradient-to-tr from-omega-900 via-omega-900 to-omega-800">
+//             <div className="flex h-full w-full flex-col content-center items-center pb-20 lg:py-4 xl:py-8">
+
+//               {/* ⭐ Tabs Section */}
+//               <div className="flex gap-4 mt-8 flex-wrap justify-center">
+//                 {tabs.map((tab) => (
+//                   <button
+//                     key={tab}
+//                     onClick={() => setActiveTab(tab)}
+//                     className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-300
+//                       ${
+//                         activeTab === tab
+//                           ? "bg-gradient-to-tr from-beta to-alpha text-black"
+//                           : "bg-omega-800 text-white hover:bg-omega-700"
+//                       }
+//                     `}
+//                   >
+//                     {tab}
+//                   </button>
+//                 ))}
+//               </div>
+
+//               <div className="mx-auto p-6 md:p-6 lg:p-12">
+//                 <div className="prose prose-headings:mb-4 dark:prose-invert">
+//                   <h3 className="text-center text-white mt-6">
+//                     {activeTab} Projects
+//                   </h3>
+
+//                   {/* ⭐ Filtered Projects */}
+//                   <div className="mt-4 grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:mt-12 gap-4">
+//                     {filteredProjects.map((project, i) => (
+//                       <a
+//                         href={project.link}
+//                         target="_blank"
+//                         rel="noopener noreferrer"
+//                         key={i}
+//                         className="relative overflow-hidden rounded-[10px] w-full group block"
+//                       >
+//                         <img
+//                           src={project.img}
+//                           alt=""
+//                           className="w-full h-[400px] rounded-[10px] object-cover transition-transform duration-500 group-hover:scale-110"
+//                         />
+
+//                         <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-t from-[#ff004f] via-black/60 to-transparent rounded-[10px] flex flex-col items-center justify-center text-center px-6 transition-all duration-500 overflow-hidden">
+//                           <h3 className="text-white font-medium text-xl mb-4">
+//                             {project.title}
+//                           </h3>
+//                           <p className="text-white text-sm">
+//                             {project.description}
+//                           </p>
+//                         </div>
+//                       </a>
+//                     ))}
+//                   </div>
+
+//                   {/* ⭐ No Project Found */}
+//                   {filteredProjects.length === 0 && (
+//                     <p className="text-center text-white mt-6">
+//                       No projects available in this category.
+//                     </p>
+//                   )}
+//                 </div>
+//               </div>
+//             </div>
+//           </main>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Portfolio;
