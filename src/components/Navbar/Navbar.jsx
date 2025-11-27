@@ -19,10 +19,11 @@ const Navbar = () => {
     <div>
       <div className="text-3xl h-[54px] bg-[#262626] z-[100] flex items-center justify-between px-6 py-2 leading-[54px] mb-px">
         <div>
-          <Link
-            className="font-sans inline-block text-[#ec0e90] h-[18px] font-semibold text-2xl md:text-[30px]"
-            to="/"
-          >
+         <Link
+  className="font-sans inline-block  font-semibold text-2xl md:text-[30px] 
+  text-transparent bg-clip-text bg-gradient-to-r from-[#F43F5E] to-[#F59E0B]"
+  to="/"
+>
             N.N.DISHA
           </Link>
         </div>
