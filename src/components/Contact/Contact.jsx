@@ -1,11 +1,42 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Contact.css";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const form = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted");
+
+    emailjs
+      .sendForm("service_ll73kdq", "template_2r58xyg", form.current, {
+        publicKey: "EMUHFrlczyLmMRCLT",
+      })
+      .then(
+        (result) => {
+          console.log("EmailJS Success:", result.text);
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Thank you for contacting us. We will reply soon 😊",
+            confirmButtonColor: "#F43F5E",
+          });
+
+          form.current.reset(); // clear form
+        },
+        (error) => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong! Try again.",
+            confirmButtonColor: "#F43F5E",
+          });
+
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   useEffect(() => {
@@ -121,7 +152,7 @@ const Contact = () => {
                   </div>
 
                   <div className="md:transition-all md:duration-1000 md:with-back-plate max-w-3xl border border-omega-700 md:before:bg-omega-700">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} ref={form}>
                       <div className="relative overflow-hidden shadow">
                         <div className="bg-gradient-omega-900">
                           <fieldset className="border-b border-dashed border-omega-700">
@@ -134,7 +165,7 @@ const Contact = () => {
                               <div className="flex items-center">
                                 <input
                                   type="text"
-                                  name="first-name"
+                                  name="from_name"
                                   autocomplete="given-name"
                                   className="block w-full border-0 py-3 px-4 border-b bg-omega-700/20  placeholder-omega-400 border-accent focus:ring-accent-500"
                                   placeholder="First name"
@@ -154,8 +185,8 @@ const Contact = () => {
                               <div className="flex items-center">
                                 <input
                                   type="email"
-                                  name="email"
-                                  autocomplete="email"
+                                  name="from_email"
+                                  autoComplete="email"
                                   className="block w-full border-0 py-3 px-4 border-b bg-omega-700/20  placeholder-omega-400 border-accent focus:ring-accent-500"
                                   placeholder="Email address"
                                   required
@@ -313,6 +344,7 @@ const Contact = () => {
                           <button
                             className="relative inline-flex items-center justify-center leading-normal no-underline group cursor-pointer select-none focus:outline-none peer md:peer-even:ml-6 w-full sm:w-1/3"
                             type="submit"
+                            value="Send"
                           >
                             <div className="z-10 h-full w-full border-4 border-transparent group-active:border-alpha flex transform-gpu transition-transform not-prose font-mono py-3 px-6 text-sm hover:translate-x-2 hover:translate-y-2 bg-white text-black">
                               <span className="mx-auto">Submit</span>
