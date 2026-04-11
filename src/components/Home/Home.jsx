@@ -78,7 +78,7 @@ const Home = () => {
                       <div className="px-3 md:px-0 pb-3 md:pb-0">
                         <p className="text-base lg:text-lg">
                           I’m Nasrin Nahar — a frontend web developer skilled in
-                          React.js, wordpress theme development and Tailwind CSS. I build clean, responsive,
+                          React.js, wordpress theme development, Tailwind CSS and Recently learned Next.js. I build clean, responsive,
                           and accessible user interfaces that offer seamless
                           user experiences. I’m passionate about creating
                           impactful digital solutions and always eager to learn

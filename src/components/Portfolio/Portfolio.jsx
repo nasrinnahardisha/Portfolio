@@ -9,6 +9,7 @@ import portImg7 from "../../assets/project-7.jpg";
 import portImg8 from "../../assets/project-7.jpg";
 import portImg9 from "../../assets/project-9.jpg";
 import portImg10 from "../../assets/project-10.jpg";
+import portImg11 from "../../assets/project-11.jpg";
 import { useEffect, useState } from "react";
 
 const projects = [
@@ -92,11 +93,19 @@ const projects = [
     description:
       "A modern React project styled with Tailwind CSS, featuring responsive layouts, reusable components, and fast performance.",
   },
+  {
+    img: portImg11,
+    link: "https://next-js-car-doc.vercel.app/",
+    title: "Car Doc",
+    category: "NEXT JS",
+    description:
+      "Next.js app with SSLCommerz payment, authentication, MongoDB, responsive UI, and booking system.",
+  },
 ];
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("All");
-  const tabs = ["All", "HTML", "Tailwind CSS", "WordPress", "React"];
+  const tabs = ["All", "HTML", "Tailwind CSS", "WordPress", "React", "NEXT JS"];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -145,7 +154,6 @@ const Portfolio = () => {
                     ))}
                   </div>
                   <div className="mt-4 min-h-[400px] grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:mt-12 gap-4">
-                    
                     {filteredProjects.map((project, i) => (
                       <a
                         href={project.link}
@@ -172,15 +180,14 @@ const Portfolio = () => {
                         </div>
                       </a>
                     ))}
-               
 
-                  {/* ⭐ No Project Found */}
-                  {filteredProjects.length === 0 && (
-                    <p className="text-center text-white mt-6">
-                      No projects available in this category.
-                    </p>
-                  )}
-                     </div>
+                    {/* ⭐ No Project Found */}
+                    {filteredProjects.length === 0 && (
+                      <p className="text-center text-white mt-6">
+                        No projects available in this category.
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,4 +199,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
