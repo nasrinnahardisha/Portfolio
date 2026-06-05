@@ -10,6 +10,7 @@ import portImg8 from "../../assets/project-7.jpg";
 import portImg9 from "../../assets/project-9.jpg";
 import portImg10 from "../../assets/project-10.jpg";
 import portImg11 from "../../assets/project-11.jpg";
+import portImg12 from "../../assets/project-12.jpg";
 import { useEffect, useState } from "react";
 
 const projects = [
@@ -92,6 +93,14 @@ const projects = [
     category: "React",
     description:
       "A modern React project styled with Tailwind CSS, featuring responsive layouts, reusable components, and fast performance.",
+  },
+  {
+    img: portImg12,
+    link: "https://zap-shift-4c521.web.app/",
+    title: "Zap Shift",
+    category: "React",
+    description:
+      "Parcel delivery platform with authentication, Stripe payments, tracking system, admin dashboard, and secure management",
   },
   {
     img: portImg11,

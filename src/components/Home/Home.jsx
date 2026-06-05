@@ -78,11 +78,12 @@ const Home = () => {
                       <div className="px-3 md:px-0 pb-3 md:pb-0">
                         <p className="text-base lg:text-lg">
                           I’m Nasrin Nahar — a frontend web developer skilled in
-                          React.js, wordpress theme development, Tailwind CSS and Recently learned Next.js. I build clean, responsive,
-                          and accessible user interfaces that offer seamless
-                          user experiences. I’m passionate about creating
-                          impactful digital solutions and always eager to learn
-                          new things and take on exciting challenges.
+                          React.js, wordpress theme development, Tailwind CSS
+                          and Recently learned Next.js. I build clean,
+                          responsive, and accessible user interfaces that offer
+                          seamless user experiences. I’m passionate about
+                          creating impactful digital solutions and always eager
+                          to learn new things and take on exciting challenges.
                         </p>
                       </div>
                     </div>
@@ -91,7 +92,7 @@ const Home = () => {
                       <div className="h-px w-full bg-gradient-to-r from-accent via-beta to-alpha hidden md:block"></div>
                       <div className="flex flex-1 flex-col items-center justify-center px-1 py-4 md:flex-row md:justify-start md:px-3 md:py-6">
                         <h2 className="m-0 md:pr-4 text-[#3A7FF0] text-2xl md:text-3xl">
-                          2+
+                          3+
                         </h2>
                         <div className="text-white text-sm md:text-base">
                           Years of experience
@@ -107,7 +108,7 @@ const Home = () => {
                       </div>
                       <div className="flex flex-1 flex-col items-center justify-center px-1 py-4 md:flex-row md:justify-start md:px-3 md:py-6">
                         <h2 className="m-0 md:pr-4 text-[#F59E0B] text-2xl md:text-3xl">
-                          3
+                          3+
                         </h2>
                         <div className="text-white text-sm md:text-base">
                           OpenSource Libraries
